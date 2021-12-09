@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: ads_production
-  username: ads
+  database: <%= ENV['ADS_DATABASE_NAME'] %>
+  username: <%= ENV['ADS_USER'] %>
   password: <%= ENV['ADS_DATABASE_PASSWORD'] %>
